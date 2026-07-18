@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  
+  /* Quiet Luxury Palette */
+  --color-espresso: #1e1412;
+  --color-gold-burnished: #c5a059;
+  --color-gold-light: #e8d7b3;
+  --color-charcoal-luxury: #121212;
+  --color-charcoal-card: #1e1e1e;
+  --color-alabaster: #fcfbfa;
+  --color-alabaster-dark: #f5f3ef;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-alabaster);
+    color: var(--color-espresso);
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, .serif-heading {
+    font-family: var(--font-serif);
+    font-weight: 400;
+  }
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-alabaster-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-burnished);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-espresso);
+}
+
+/* Leather Patina Fade effect */
+.patina-journey-glow {
+  box-shadow: 0 0 40px rgba(197, 160, 89, 0.08);
+}
